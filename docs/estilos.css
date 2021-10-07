@@ -2,8 +2,22 @@
     font-size: 200%;
     text-align: center;
     margin-top: 10%;
+    margin-left: 20%;
 }
 
 .formulario{
     margin-top:10%;
+}
+
+.subTitulo{
+    font-weight: bold;
+}
+
+.item{
+    border-top: 1px dotted #070707;
+    margin-top: 5%;
+}
+
+.img{
+    border-radius: 100%;
 }
