@@ -89,28 +89,28 @@
               <li>
                 <p>2019 - Globant</p> 
                 <p>Ssr. Adv. Java Developer</p>
-                <button class="shadow bg-purple-500 hover:bg-purple-400 focus:shadow-outline focus:outline-none text-white font-bold py-1 px-2 rounded" type="button">
+                <button  onclick="openModalGlobant()" class="shadow bg-purple-500 hover:bg-purple-400 focus:shadow-outline focus:outline-none text-white font-bold py-1 px-2 rounded" data-open="modalGlobant" type="button">
                   Mas Info
                 </button>
               </li>
               <li>
                 <p class="item">2016-2019 Porto Seguro</p>
                 <p>Developer</p>
-                <button class="shadow bg-purple-500 hover:bg-purple-400 focus:shadow-outline focus:outline-none text-white font-bold py-1 px-2 rounded" type="button">
+                <button onclick="openModalPorto()" class="shadow bg-purple-500 hover:bg-purple-400 focus:shadow-outline focus:outline-none text-white font-bold py-1 px-2 rounded" data-open="modalPorto" type="button">
                   Mas Info
                 </button>
               </li>
               <li>
                 <p class="item">2015-2016 TCS</p>
                 <p>.NET Developer</p>
-                <button class="shadow bg-purple-500 hover:bg-purple-400 focus:shadow-outline focus:outline-none text-white font-bold py-1 px-2 rounded" type="button">
+                <button onclick="openModalTCS()" class="shadow bg-purple-500 hover:bg-purple-400 focus:shadow-outline focus:outline-none text-white font-bold py-1 px-2 rounded" data-open="modalTCS" type="button">
                   Mas Info
                 </button>
               </li>
               <li>
                 <p class="item">2013-2015 ATOS</p>
                 <p>Jr. Developer</p>
-                <button class="shadow bg-purple-500 hover:bg-purple-400 focus:shadow-outline focus:outline-none text-white font-bold py-1 px-2 rounded" type="button">
+                <button onclick="openModalAtos()" class="shadow bg-purple-500 hover:bg-purple-400 focus:shadow-outline focus:outline-none text-white font-bold py-1 px-2 rounded" data-open="modalAtos" type="button">
                   Mas Info
                 </button>
               </li>
@@ -200,5 +200,67 @@
             </label>
           </form>
     </section>
+    
+    <div class="modal" id="modalPorto" data-animation="slideInOutLeft">
+      <div class="modal-dialog">
+        <header class="modal-header">
+          Porto
+          <button class="close-modal" aria-label="close modal" data-close>
+            ✕  
+          </button>
+        </header>
+        <section class="modal-content">
+          <p><strong>Press ✕, ESC, or click outside of the modal to close it</strong></p>
+          <p>Porto stuff</p>
+        </section>
+      </div>
+    </div>
+
+    <div class="modal" id="modalGlobant" data-animation="slideInOutLeft">
+      <div class="modal-dialog">
+        <header class="modal-header">
+          Blobant
+          <button class="close-modal" aria-label="close modal" data-close>
+            ✕  
+          </button>
+        </header>
+        <section class="modal-content">
+          <p><strong>Press ✕, ESC, or click outside of the modal to close it</strong></p>
+          <p>Globant stuff</p>
+        </section>
+      </div>
+    </div>
+
+    <div class="modal" id="modalAtos" data-animation="slideInOutLeft">
+      <div class="modal-dialog">
+        <header class="modal-header">
+          Atos
+          <button class="close-modal" aria-label="close modal" data-close>
+            ✕  
+          </button>
+        </header>
+        <section class="modal-content">
+          <p><strong>Press ✕, ESC, or click outside of the modal to close it</strong></p>
+          <p>Atos stuff</p>
+        </section>
+      </div>
+    </div>
+
+    <div class="modal" id="modalTCS" data-animation="slideInOutLeft">
+      <div class="modal-dialog">
+        <header class="modal-header">
+          TCS
+          <button class="close-modal" aria-label="close modal" data-close>
+            ✕  
+          </button>
+        </header>
+        <section class="modal-content">
+          <p><strong>Press ✕, ESC, or click outside of the modal to close it</strong></p>
+          <p>TCS stuff</p>
+        </section>
+
+      </div>
+    </div>
+   
 </body>
 </html>
