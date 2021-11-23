@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+  <link href="/tailwind.css" rel="stylesheet">
     <link rel="stylesheet" href="estilos.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Curriculum Vitae</title>
     <script type="text/javascript" src="scripts.js"></script>
+    <script type="text/javascript" src="apiRequest.js"></script>
 </head>
 <body>
     <section> 
@@ -17,15 +18,15 @@
                 <p class="w-64 font-serif titulo">Curriculum Vitae</p>
             </div>
             <div class="col-start-3 bg-blue-200">
-              <img class="object-scale-down h-47 w-full img" src="images/pp.jpg" alt="perfil" style="width:180px">
+              <img class="object-scale-down lg:h-45 lg:w-45  sm:max-w-sm img flex" src="images/pp.jpg" alt="perfil" style="width:180px">
             </div>
         </div>
 
     </section>
     <section>
-        <div class="grid grid-cols-11">
-            <div class="col-start-1 col-end-1 bg-blue-100">
-                <ul class="estudios">
+        <div class="grid grid-cols-11 ">
+            <div class="col-start-1 col-end-1 lg:bg-blue-100 md:bg-red-500 flex">
+                <ul class="estudios ">
                     <li>
                         <p>Nombre:</p>
                     </li>
@@ -43,20 +44,20 @@
                     </li>
                     <li>
                      <a href="https://www.facebook.com/franco.gai/"> 
-                      <button class="bg-blue-500 hover:bg-purple-400 px-3 py-1 font-semibold text-white inline-flex items-center space-x-2 rounded">
-                        <svg class="w-5 h-5 fill-current" role="img" xmlns="https://www.facebook.com/franco.gai/" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                      <button class="bg-blue-500 hover:bg-purple-400 lg:px-3 lg:py-1 sm:px-0.5 sm:py-0.5 font-semibold text-white inline-flex items-center space-x-2 rounded">
+                        <svg class="lg:w-5 lg:h-5 sm:w-2 sm:h-2 fill-current" role="img" xmlns="https://www.facebook.com/franco.gai/" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
                         <span>Facebook</span>
                       </button>
                     </a>
 
-                      <button class="bg-blue-300 px-3 py-1 hover:bg-purple-400 font-semibold text-white inline-flex items-center space-x-2 rounded">
-                        <svg class="w-5 h-5 fill-current" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></svg>
+                      <button onclick="getGlobantData()" class="bg-blue-300 lg:px-3 lg:py-1 sm:px-0.5 sm:lg-0.5   hover:bg-purple-400 font-semibold text-white inline-flex items-center space-x-2 rounded">
+                        <svg class="lg:w-5 lg:h-5 sm:w-2 sm:h-2 fill-current flex" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></svg>
                         <span>Twitter</span>
                       </button>
                     </li>
                 </ul>
             </div>
-            <div class="col-start-2 bg-blue-100">
+            <div class="col-start-2 lg:bg-blue-100 md:bg-red-500">
                 <ul>
                     <li>
                         <p>Franco</p>
@@ -88,7 +89,7 @@
             <ul>
               <li>
                 <p>2019 - Globant</p> 
-                <p>Ssr. Adv. Java Developer</p>
+                <p id="cargoGlobant">Ssr. Adv. Java Developer</p>
                 <button  onclick="openModalGlobant()" class="shadow bg-purple-500 hover:bg-purple-400 focus:shadow-outline focus:outline-none text-white font-bold py-1 px-2 rounded" data-open="modalGlobant" type="button">
                   Mas Info
                 </button>
@@ -190,7 +191,7 @@
             <div class="md:flex md:items-center">
               <div class="md:w-1/3"></div>
               <div class="md:w-2/3">
-                <button onclick="nuevoUsuario()" class="shadow bg-purple-500 hover:bg-purple-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded" type="button">
+                <button onclick="saveUserinCookie()" class="shadow bg-purple-500 hover:bg-purple-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded" type="button">
                   Guardar
                 </button>
               </div>
